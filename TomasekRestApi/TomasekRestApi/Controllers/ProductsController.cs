@@ -9,9 +9,9 @@ using TomasekRestApi.Model.Dto;
 namespace TomasekRestApi.Controllers
 {
     [ApiController]
-    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiVersion("1.0")]
     [ApiVersion("2.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class ProductsController : Controller
     {
         private readonly IProductRepository _repository;
@@ -24,9 +24,13 @@ namespace TomasekRestApi.Controllers
 
         }
 
-        //GET api/products
+        /// <summary>
+        /// GetAllProducts in system
+        /// </summary>
+        /// <returns>Returns all products in DB</returns>
         [MapToApiVersion("1.0")]
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<IEnumerable<ProductReadDto>> GetAllProducts()
         {
             var productItems = _repository.GetProducts();
@@ -36,10 +40,16 @@ namespace TomasekRestApi.Controllers
             }
             return Ok(_mapper.Map<IEnumerable<ProductReadDto>>(productItems));
         }
-        
-        //GET api/products
+
+        /// <summary>
+        /// GetAllProducts using page and size of page
+        /// </summary>
+        /// <param name="page">Requested page number</param>
+        /// <param name="pageSize">Size of page items</param>
+        /// <returns>Return list of products with size</returns>
         [MapToApiVersion("2.0")]
         [HttpGet("{page}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<IEnumerable<ProductReadDto>> GetAllProducts(int page,int pageSize = 10)
         {
             var productItems = _repository.GetProducts(page,pageSize);
@@ -50,8 +60,13 @@ namespace TomasekRestApi.Controllers
             return Ok(_mapper.Map<IEnumerable<ProductReadDto>>(productItems));
         }
 
-        //GET api/products/{id}
+        /// <summary>
+        /// Get Product by ID
+        /// </summary>
+        /// <param name="id">id of product</param>
+        /// <returns>return one product of requested id if exists</returns>
         [HttpGet("{id}", Name = "GetProductsById")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<ProductReadDto> GetProductById(int id)
         {
             var productItem = _repository.GetProductById(id);
@@ -63,7 +78,14 @@ namespace TomasekRestApi.Controllers
         }
 
         //PATCH api/products/{id}
+        /// <summary>
+        /// Update specification of product with id
+        /// </summary>
+        /// <param name="id">id of product</param>
+        /// <param name="desc">new description for product</param>
+        /// <returns>returns no content</returns>
         [HttpPatch("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult PartialProductUpdate(int id, string desc)
         {
             var productFromRepo = _repository.GetProductById(id);

@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.PlatformAbstractions;
+using System.Reflection;
 using TomasekRestApi.BL.Data;
 using TomasekRestApi.Model.Cryptography;
 using TomasekRestApi.Model.Models;
@@ -27,7 +29,20 @@ builder.Services.AddTransient<DataSeeder>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+string XmlCommentsFilePath()
+{
+    
+        var basePath = PlatformServices.Default.Application.ApplicationBasePath;
+        var fileName = typeof(Program).GetTypeInfo().Assembly.GetName().Name + ".xml";
+        return Path.Combine(basePath, fileName);
+    
+}
+//builder.Services.AddSwaggerGen();
+
+builder.Services.AddSwaggerGen(options => {
+    options.IncludeXmlComments(XmlCommentsFilePath());
+});
 
 var app = builder.Build();
 
@@ -46,6 +61,8 @@ void SeedData(IHost app)
     }
 }
 
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -53,6 +70,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
     app.UseDeveloperExceptionPage();
 }
+
+
 
 app.UseHttpsRedirection();
 

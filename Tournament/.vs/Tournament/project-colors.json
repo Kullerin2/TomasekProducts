@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "fbb1e670-0a76-4265-85a3-fe8268b43145": {
+      "ProjectGuid": "fbb1e670-0a76-4265-85a3-fe8268b43145",
+      "DisplayName": "Tournament",
+      "ColorIndex": 0
+    },
+    "043c98f2-3cc7-4f4a-91ac-1aa86047b628": {
+      "ProjectGuid": "043c98f2-3cc7-4f4a-91ac-1aa86047b628",
+      "DisplayName": "RegisterTournament",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
