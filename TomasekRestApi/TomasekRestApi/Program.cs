@@ -2,12 +2,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using TomasekRestApi.BL.Data;
+using TomasekRestApi.Model.Cryptography;
 using TomasekRestApi.Model.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("WebApiDatabase");
-
-builder.Services.AddDbContext<AlzaTestDBContext>(x => x.UseSqlServer(connectionString));
+var connectionStringEncrypted = builder.Configuration.GetConnectionString("WebApiDatabase");
+var connectionStringDecrypted = CryptoHelper.DecryptString(connectionStringEncrypted);
+builder.Services.AddDbContext<AlzaTestDBContext>(x => x.UseSqlServer(connectionStringDecrypted));
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

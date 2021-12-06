@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.Configuration;
+using TomasekRestApi.Model.Cryptography;
 
 namespace TomasekRestApi.Model.Models
 {
@@ -28,8 +29,9 @@ namespace TomasekRestApi.Model.Models
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-                var connectionString = configuration.GetConnectionString("WebApiDatabase");
-                optionsBuilder.UseSqlServer(connectionString);
+                var connectionStringEncrypted = configuration.GetConnectionString("WebApiDatabase");
+                var connectionStringDecrypted = CryptoHelper.DecryptString(connectionStringEncrypted);                
+                optionsBuilder.UseSqlServer(connectionStringDecrypted);
             }
         }
 

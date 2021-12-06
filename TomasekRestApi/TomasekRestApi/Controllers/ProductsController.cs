@@ -9,7 +9,7 @@ using TomasekRestApi.Model.Dto;
 namespace TomasekRestApi.Controllers
 {
     [ApiController]
-    [Route("api/[controller]/v{version:apiVersion}")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiVersion("1.0")]
     [ApiVersion("2.0")]
     public class ProductsController : Controller
