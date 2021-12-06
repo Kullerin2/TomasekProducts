@@ -5,3 +5,10 @@
 /TomasekRestApi/.vs/TomasekRestApi
 /TomasekRestApi/TomasekRestApi/bin/Debug/net6.0
 /TomasekRestApi/TomasekRestApi/obj
+/.vs/Alza/v17
+/TomasekRestApi/RestApiUnitTests/bin
+/TomasekRestApi/RestApiUnitTests/obj
+/TomasekRestApi/TomasekRestApi.BL/bin/Debug/net6.0
+/TomasekRestApi/TomasekRestApi.BL/obj
+/TomasekRestApi/TomasekRestApi.Model/bin/Debug/net6.0
+/TomasekRestApi/TomasekRestApi.Model/obj

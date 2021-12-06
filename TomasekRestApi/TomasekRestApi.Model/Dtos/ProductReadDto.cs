@@ -1,4 +1,4 @@
-﻿namespace TomasekRestApi.Dtos
+﻿namespace TomasekRestApi.Model.Dto
 {
     public class ProductReadDto
     {

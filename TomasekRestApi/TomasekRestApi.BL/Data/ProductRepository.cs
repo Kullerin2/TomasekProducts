@@ -1,7 +1,7 @@
 ﻿
-using TomasekRestApi.Models;
+using TomasekRestApi.Model.Models;
 
-namespace TomasekRestApi.Data
+namespace TomasekRestApi.BL.Data
 {
     public class ProductRepository : IProductRepository
     {

@@ -1,4 +1,4 @@
-﻿namespace TomasekRestApi.Dtos
+﻿namespace TomasekRestApi.Model.Dtos
 {
     public class ProductUpdateDto
     {

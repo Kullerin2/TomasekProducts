@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using TomasekRestApi.Dtos;
-using TomasekRestApi.Models;
+using TomasekRestApi.Model.Dto;
+using TomasekRestApi.Model.Models;
 
 namespace TomasekRestApi.Profiles
 {

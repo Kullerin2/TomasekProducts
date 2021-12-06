@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TomasekRestApi.Models
+namespace TomasekRestApi.Model.Models
 {
     public partial class Product
     {

@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomasekRestApi", "TomasekRestApi\TomasekRestApi.csproj", "{2C8B3A95-2462-4C4A-860D-C7203221A55F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TomasekRestApi", "TomasekRestApi\TomasekRestApi.csproj", "{2C8B3A95-2462-4C4A-860D-C7203221A55F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestApiUnitTests", "RestApiUnitTests\RestApiUnitTests.csproj", "{D2908DEC-6CA7-455A-A2C6-4E7E92E4E404}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomasekRestApi.BL", "TomasekRestApi.BL\TomasekRestApi.BL.csproj", "{87662675-538B-4F9D-9966-193D1743B8DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomasekRestApi.Model", "TomasekRestApi.Model\TomasekRestApi.Model.csproj", "{B5C4872D-500E-4E6A-9DCE-B87A02955E2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{2C8B3A95-2462-4C4A-860D-C7203221A55F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C8B3A95-2462-4C4A-860D-C7203221A55F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C8B3A95-2462-4C4A-860D-C7203221A55F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2908DEC-6CA7-455A-A2C6-4E7E92E4E404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2908DEC-6CA7-455A-A2C6-4E7E92E4E404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2908DEC-6CA7-455A-A2C6-4E7E92E4E404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2908DEC-6CA7-455A-A2C6-4E7E92E4E404}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87662675-538B-4F9D-9966-193D1743B8DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87662675-538B-4F9D-9966-193D1743B8DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87662675-538B-4F9D-9966-193D1743B8DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87662675-538B-4F9D-9966-193D1743B8DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5C4872D-500E-4E6A-9DCE-B87A02955E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5C4872D-500E-4E6A-9DCE-B87A02955E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5C4872D-500E-4E6A-9DCE-B87A02955E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5C4872D-500E-4E6A-9DCE-B87A02955E2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

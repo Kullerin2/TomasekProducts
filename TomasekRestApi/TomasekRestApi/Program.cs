@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
-using TomasekRestApi.Data;
-using TomasekRestApi.Models;
+using TomasekRestApi.BL.Data;
+using TomasekRestApi.Model.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("WebApiDatabase");
@@ -17,7 +17,7 @@ builder.Services.AddApiVersioning(options =>
     options.DefaultApiVersion = new ApiVersion(1, 0);
     options.AssumeDefaultVersionWhenUnspecified = true;
     options.ReportApiVersions = true;
-    options.ApiVersionReader = new MediaTypeApiVersionReader("v");
+    //options.ApiVersionReader = new MediaTypeApiVersionReader("v");
 });
 builder.Services.AddTransient<DataSeeder>();
 

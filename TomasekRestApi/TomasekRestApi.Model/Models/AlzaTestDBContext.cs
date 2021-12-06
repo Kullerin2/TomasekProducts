@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Configuration;
 
-namespace TomasekRestApi.Models
+namespace TomasekRestApi.Model.Models
 {
     public partial class AlzaTestDBContext : DbContext
     {
