@@ -1,0 +1,16 @@
+﻿<Window x:Class="Tournament.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tournament"
+        mc:Ignorable="d"
+        Title="About" Height="232.395" Width="257.746">
+    <Grid Margin="0,0,55,49.333">
+        <Label Content="Copyright : Kuller company&#xD;&#xA;" HorizontalAlignment="Left" Height="30" Margin="22,21,0,0" VerticalAlignment="Top" Width="242"/>
+        <Label Content="Author : Libor Tomášek" HorizontalAlignment="Left" Height="30" Margin="22,56,0,0" VerticalAlignment="Top" Width="242"/>
+        <Label Content="Email : kuller@seznam.cz" HorizontalAlignment="Left" Height="30" Margin="22,91,0,0" VerticalAlignment="Top" Width="242"/>
+        <Label Content="Version : 0.9.0" HorizontalAlignment="Left" Height="30" Margin="22,126,-33,0" VerticalAlignment="Top" Width="242"/>
+
+    </Grid>
+</Window>

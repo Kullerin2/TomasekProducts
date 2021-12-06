@@ -1,0 +1,111 @@
+﻿<Window x:Class="Tournament.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tournament"
+        mc:Ignorable="d"        
+        Title="{DynamicResource Window.Settings}" Height="520" Width="600" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsManipulationEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="800" MinHeight="520" MaxHeight="520" MaxWidth="800" Loaded="Window_Loaded" >
+
+    <Grid Margin="10,10,10,10" Background="BurlyWood">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="50*"/>
+
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+
+            <StackPanel Margin="10"  Grid.Column="0">
+                <Label FontWeight="Bold" Content="{DynamicResource Settings.GameType}" ToolTip="{DynamicResource Tooltip.GameType}"/>
+                <RadioButton x:Name="radSingle" Checked="radSingle_Checked" Loaded="radSingle_Loaded" Content="{DynamicResource Settings.Single}" ToolTip="{DynamicResource Tooltip.Single}"/>
+                <RadioButton x:Name="radTeams" Checked="radTeams_Checked" Loaded="radTeams_Loaded" Content="{DynamicResource Settings.Pairs}" ToolTip="{DynamicResource Tooltip.Pairs}"/>
+                <RadioButton x:Name="radDef" Checked="radDef_Checked" Loaded="radDef_Loaded" Content="{DynamicResource Settings.Rounds}" ToolTip="{DynamicResource Tooltip.Rounds}"/>
+                <RadioButton x:Name="radRandom" Checked="radRandom_Checked" Loaded="radRandom_Loaded" Content="{DynamicResource Settings.Random}" ToolTip="{DynamicResource Tooltip.Random}"/>
+                <RadioButton x:Name="radRandomSwiss" Checked="radRandomSwiss_Checked" Loaded="radRandomSwiss_Loaded" Content="{DynamicResource Settings.RandomSwiss}" ToolTip="{DynamicResource Tooltip.RandomSwiss}"/>
+                <RadioButton x:Name="radSwiss" Checked="radSwiss_Checked" Loaded="radSwiss_Loaded" Content="{DynamicResource Settings.Swiss}" ToolTip="{DynamicResource Tooltip.RandomSwiss}"/>
+
+            </StackPanel>
+
+            <StackPanel Margin="10" Grid.Column="1">
+                <Label FontWeight="Bold" Content="{DynamicResource Settings.ScoreType}" ToolTip="{DynamicResource Tooltip.ScoreType}"/>
+                <RadioButton x:Name="radSet" Loaded="radSet_Loaded" Click="radPoints_Click" Content="{DynamicResource Settings.Sets}" ToolTip="{DynamicResource Tooltip.Sets}"/>
+                <RadioButton x:Name="radSetScore" Loaded="radSetScore_Loaded" Click="radPoints_Click" Content="{DynamicResource Settings.SetsScore}" ToolTip="{DynamicResource Tooltip.SetsScore}"/>
+                <RadioButton x:Name="radPoints"  Loaded="radPoints_Loaded" Click="radPoints_Click" Content="{DynamicResource Settings.Points}" ToolTip="{DynamicResource Tooltip.Points}"/>
+                <RadioButton x:Name="radGames" Loaded="radGames_Loaded" Click="radPoints_Click" Content="{DynamicResource Settings.Games}" ToolTip="{DynamicResource Tooltip.Games}"/>
+
+            </StackPanel>
+            <StackPanel Margin="10" Grid.Column="2">
+                <Label FontWeight="Bold" Content="{DynamicResource Settings.SetCount}" ToolTip="{DynamicResource Tooltip.SetCount}"/>
+                <RadioButton x:Name="radSet1" Loaded="radSet1_Loaded" Click="radSet1_Click" Content="{DynamicResource Settings.1Set}" ToolTip="{DynamicResource Tooltip.1Set}" />
+                <RadioButton x:Name="radSet2" Loaded="radSet2_Loaded" Click="radSet2_Click" Content="{DynamicResource Settings.2Set}" ToolTip="{DynamicResource Tooltip.2Set}"/>
+                <RadioButton x:Name="radSet3" Loaded="radSet3_Loaded" Click="radSet3_Click" Content="{DynamicResource Settings.3Set}" ToolTip="{DynamicResource Tooltip.3Set}"/>
+
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="16*"/>
+                <RowDefinition Height="16*"/>
+                <RowDefinition Height="16*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="20*"/>
+                
+
+            </Grid.RowDefinitions>
+
+            <Label FontWeight="Bold" Margin="10,10,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" HorizontalAlignment="Left"  Content="{DynamicResource Settings.PlayerCount}" ToolTip="{DynamicResource Tooltip.PlayerCount}"/>
+            <ComboBox  x:Name="cmbPlayers" HorizontalAlignment="Left" Margin="188,10,0,0" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Stretch" 
+                       VerticalContentAlignment="Stretch" Width="256" Loaded="cmbPlayers_Loaded" ItemsSource="{Binding Items}">
+                <ComboBox.Resources>
+                    <local:ComboboxDisableConverter x:Key="itemDisableconverter"/>
+                </ComboBox.Resources>
+                <ComboBox.ItemContainerStyle>
+                    <Style TargetType="ComboBoxItem">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Content, RelativeSource={RelativeSource Self},
+                            Converter={StaticResource itemDisableconverter}}" Value="true">
+                                <Setter Property="IsEnabled" Value="False"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </ComboBox.ItemContainerStyle>
+            </ComboBox>
+            <Label FontWeight="Bold" Margin="10,10,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Grid.Row="1" Content="{DynamicResource Settings.SwissPoint}" ToolTip="{DynamicResource Tooltip.SwissPoint}" />
+            <ComboBox  x:Name="cmbPoints" HorizontalAlignment="Left" Margin="188,10,0,0" VerticalAlignment="Top" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="256" Loaded="cmbPoints_Loaded"  />
+
+            <CheckBox x:Name="chkGen"  Content="{DynamicResource Settings.GenerateCourt}" Margin="480,15,-480,113" Grid.Row="2" Grid.RowSpan="2" Loaded="chkGen_Loaded" ToolTip="{DynamicResource Tooltip.GenerateCourt}"/>
+            <StackPanel Margin="10"  Grid.Row="3">
+
+                <RadioButton x:Name="radUniqueCo" Checked="radUniqueCo_Checked" Loaded="radUniqueCo_Loaded"  Content="{DynamicResource Settings.UniqueCo}" ToolTip="{DynamicResource Tooltip.UniqueCo}" />
+                <RadioButton x:Name="radUniqueOpo"  Checked="radUniqueOpo_Checked" Loaded="radUniqueOpo_Loaded" Content="{DynamicResource Settings.UniqueOpo}" ToolTip="{DynamicResource Tooltip.UniqueOpo}"/>
+                <RadioButton x:Name="radUniqueOpoWoman"  Checked="radUniqueOpoWoman_Checked" Loaded="radUniqueOpoWoman_Loaded" Content="{DynamicResource Settings.UniqueOpoWoman}" ToolTip="{DynamicResource Tooltip.UniqueOpoWoman}"/>
+                <RadioButton x:Name="radFull"  Checked="radFull_Checked" Loaded="radFull_Loaded"  Content="{DynamicResource Settings.Full}" ToolTip="{DynamicResource Tooltip.Full}"  />
+                <RadioButton x:Name="radMix"  Checked="radMix_Checked" Loaded="radMix_Loaded"  Content="{DynamicResource Settings.Mix}" ToolTip="{DynamicResource Tooltip.Mix}" />
+            </StackPanel>
+            
+
+            <Label FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-1.908,-0.4" Content="{DynamicResource Settings.CourtCount}" ToolTip="{DynamicResource Tooltip.CourtCount}"/>
+            <ComboBox Name="cmbCourt" HorizontalAlignment="Left" Margin="188,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="256" Loaded="cmbCourt_Loaded"/>
+            <ComboBox x:Name="cmbLanguage" HorizontalAlignment="Left" Margin="188,89.333,0,0" Grid.Row="3" VerticalAlignment="Top" Width="256" Loaded="cmbLanguage_Loaded" SelectionChanged="cmbLanguage_SelectionChanged" />
+            
+
+            <Label FontWeight="Bold" Content="{DynamicResource Settings.Language}" Margin="10,88.333,-9.667,-0.333" Grid.Row="3" ToolTip="{DynamicResource Tooltip.Language}"/>
+
+            <Label FontWeight="Bold" Content="{DynamicResource Settings.AppName}" Margin="10,10 ,0,0" Grid.Row="4" ToolTip="{DynamicResource Tooltip.AppName}"/>
+            <TextBox Name="txtAppName" Margin="188,7.667,328.333,21.333" Grid.Row ="4" Height="23" TextWrapping="Wrap" Text="" Loaded="txtAppName_Loaded"/>
+            <CheckBox x:Name="chkScore" Content="{DynamicResource Settings.Score}" HorizontalAlignment="Left" Margin="493,10,0,20.333" Grid.Row="4"   Loaded="chkScore_Loaded" Width="149" ToolTip="{DynamicResource Tooltip.Score}"/>
+            <Button Background ="Yellow" Content="{DynamicResource btn.OK}" HorizontalAlignment="Left" Margin="688,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="75" RenderTransformOrigin="5.387,3.523" Click="Button_Click" IsDefault="True"/>
+
+
+        </Grid>
+    </Grid>
+</Window>
+
+    

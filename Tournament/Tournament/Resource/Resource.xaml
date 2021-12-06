@@ -1,0 +1,144 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Tournament"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="btn.Close">Close</system:String>
+    <system:String x:Key="btn.Clear">Delete rounds</system:String>
+    <system:String x:Key="btn.OK">OK</system:String>
+    <system:String x:Key="btn.Save">Save</system:String>    
+    <system:String x:Key="btn.Cancel">Cancel</system:String>
+    <system:String x:Key="btn.Player">Player edit</system:String>
+    <system:String x:Key="btn.Load">Load</system:String>
+    <system:String x:Key="btn.Settings">Settings</system:String>
+    <system:String x:Key="btn.Screen">Screen</system:String>
+    <system:String x:Key="btn.ResultList">List</system:String>
+    <system:String x:Key="btn.Rounds">Rounds</system:String>
+    <system:String x:Key="btn.Table">Result Table</system:String>
+    <system:String x:Key="btn.Names">Player Names</system:String>
+    <system:String x:Key="btn.Result">Round Result</system:String>
+    <system:String x:Key="btn.Next">Next</system:String>
+    <system:String x:Key="btn.Previous">Previous</system:String>
+    <system:String x:Key="btn.New">New</system:String>
+    <system:String x:Key="btn.Print">Print</system:String>
+    <system:String x:Key="btn.Register">Register</system:String>
+    <system:String x:Key="btn.Copy">Copy to Clipboard</system:String>
+    <system:String x:Key="btn.NewPlayer">New Player</system:String>
+    <system:String x:Key="btn.Upload">Upload</system:String>
+    <system:String x:Key="btn.Delete">Delete</system:String>
+    <system:String x:Key="btn.AddSingle">New Single</system:String>
+    <system:String x:Key="btn.AddDouble">New Double</system:String>
+
+    <system:String x:Key="lbl.Register">For registration, sent token to author. You will receive key for registration for some time intrval. Use that and click register</system:String>
+    <system:String x:Key="lbl.RegisterToken">Registration Token :</system:String>
+    <system:String x:Key="lbl.RegisterKey">Registration Key :</system:String>
+
+    <system:String x:Key="lbl.Picture">Picture</system:String>
+    <system:String x:Key="lbl.FirstName">FirstName</system:String>
+    <system:String x:Key="lbl.SurName">SurName</system:String>
+    <system:String x:Key="lbl.SelectPlayer">Select player</system:String>
+
+    <system:String x:Key="English">English</system:String>    
+    <system:String x:Key="Czech">Czech</system:String>
+
+    <system:String x:Key="Window.Player">Edit Players</system:String>
+    <system:String x:Key="Window.Tournament">Tournament</system:String>
+    <system:String x:Key="Window.Names">Player Names</system:String>
+    <system:String x:Key="Window.Result">Round Result</system:String>
+    <system:String x:Key="Window.Rounds">Rounds List</system:String>
+    <system:String x:Key="Window.List">Result List</system:String>
+    <system:String x:Key="Window.Settings">Settings</system:String>
+    <system:String x:Key="Window.Table">Result Table</system:String>
+
+    <system:String x:Key="hdr.Game">Game</system:String>
+    <system:String x:Key="hdr.File">File</system:String>
+
+    <system:String x:Key="Round">Round</system:String>
+    <system:String x:Key="NextRound">Next Round</system:String>
+    <system:String x:Key="RoundNotExits">Next round not exists</system:String>
+    <system:String x:Key="RoundSit">Sits</system:String>
+    <system:String x:Key="Page">Page</system:String>
+    <system:String x:Key="Name">Name</system:String>
+    <system:String x:Key="No">No</system:String>
+    <system:String x:Key="Sets">Sets</system:String>
+    <system:String x:Key="Points">Points</system:String>
+    <system:String x:Key="Games">Games</system:String>
+    <system:String x:Key="Player">Player</system:String>
+    <system:String x:Key="TournamentResult">Tournament Results</system:String>
+
+    <system:String x:Key="chk.AllRounds">All Rounds</system:String>
+    <system:String x:Key="chk.AllPlayers">All Players</system:String>
+    
+    <system:String x:Key="Settings.GameType">Game Type</system:String>
+    <system:String x:Key="Settings.Single">Single</system:String>
+    <system:String x:Key="Settings.Pairs">Defined Pairs</system:String>
+    <system:String x:Key="Settings.Rounds">Predefined Rounds</system:String>
+    <system:String x:Key="Settings.Random">Random Rounds</system:String>
+    <system:String x:Key="Settings.RandomSwiss">Random Swiss</system:String>
+    <system:String x:Key="Settings.Swiss">Swiss</system:String>
+    
+    <system:String x:Key="Settings.ScoreType">Score Type</system:String>
+    <system:String x:Key="Settings.Sets">Sets</system:String>
+    <system:String x:Key="Settings.SetsScore">Sety and Score</system:String>
+    <system:String x:Key="Settings.Points">Points</system:String>
+    <system:String x:Key="Settings.Games">Swiss</system:String>
+
+    <system:String x:Key="Settings.SetCount">Set Count, Best Of:</system:String>
+    <system:String x:Key="Settings.1Set">1 Set</system:String>
+    <system:String x:Key="Settings.2Set">2 Sets</system:String>
+    <system:String x:Key="Settings.3Set">3 Sets</system:String>
+
+    <system:String x:Key="Settings.PlayerCount">Number of players</system:String>
+    <system:String x:Key="Settings.SwissPoint">Points in Swiss Game</system:String>
+    <system:String x:Key="Settings.CourtCount">Court Count</system:String>
+    <system:String x:Key="Settings.GenerateCourt">Generate matches for Courts</system:String>
+
+    <system:String x:Key="Settings.Score">Show extended score</system:String>
+    <system:String x:Key="Settings.UniqueCo">Unique CoPlayer</system:String>
+    <system:String x:Key="Settings.UniqueOpo">Unique CoPlayer and Oponents</system:String>
+    <system:String x:Key="Settings.Full">Full Random Round</system:String>
+    <system:String x:Key="Settings.Mix">Only Mix - Full Random Rounds - Mens/Womans - even/odd</system:String>
+    <system:String x:Key="Settings.Language">Language</system:String>
+    <system:String x:Key="Settings.AppName">Application Name</system:String>
+    
+    
+    <system:String x:Key="Tooltip.Score">Shows the score of each match in table</system:String>
+    <system:String x:Key="Tooltip.Language">Select language of application</system:String>
+    <system:String x:Key="Tooltip.AppName">Select name of tournament</system:String>
+    <system:String x:Key="Tooltip.GameType">Select type of new Game</system:String>
+    <system:String x:Key="Tooltip.Single">Single tournaments</system:String>
+    <system:String x:Key="Tooltip.Pairs">Defined pairs with predefined Rounds</system:String>
+    <system:String x:Key="Tooltip.Rounds">Predefined Rounds, where players plays with each other</system:String>
+    <system:String x:Key="Tooltip.Random">Random round, each round is generated by NEXT button</system:String>
+    <system:String x:Key="Tooltip.RandomSwiss">Swiss,which creates teams by theirs results</system:String>
+    <system:String x:Key="Tooltip.Swiss">Swiss</system:String>
+
+    <system:String x:Key="Tooltip.ScoreType">Criterium of game counting</system:String>
+    <system:String x:Key="Tooltip.Sets">Sets are important and then mutual match </system:String>
+    <system:String x:Key="Tooltip.SetsScore">Sets are important and then score</system:String>
+    <system:String x:Key="Tooltip.Points">Poins</system:String>
+    <system:String x:Key="Tooltip.Games">Counting like swiss game</system:String>
+
+    <system:String x:Key="Tooltip.SetCount">Count of maximum of played sets</system:String>
+    <system:String x:Key="Tooltip.1Set">Match with 1 set</system:String>
+    <system:String x:Key="Tooltip.2Set">Match with 2 played sets</system:String>
+    <system:String x:Key="Tooltip.3Set">Match with 2 winning sets</system:String>
+
+    <system:String x:Key="Tooltip.PlayerCount">Player Count</system:String>
+    <system:String x:Key="Tooltip.SwissPoint">Point where looser of set take one additional point</system:String>
+    <system:String x:Key="Tooltip.CourtCount">Court count</system:String>
+    <system:String x:Key="Tooltip.GenerateCourt">Generate matches by court count, where round will contain only matches for courts</system:String>
+
+    <system:String x:Key="Tooltip.UniqueCo">Unique CoPlayers. Each player will play with somebody only once</system:String>
+    <system:String x:Key="Tooltip.UniqueOpo">Unique All Players. Each player will play with and against somebody only once</system:String>
+    <system:String x:Key="Tooltip.Full">Full rounds, where each player will play with all others</system:String>
+    <system:String x:Key="Tooltip.Mix">Mix, where each mens, will play with all womans, Mans should use Name in odd place, and Woman in even place, then only mix will be generated</system:String>
+
+    <system:String x:Key="UserSaved">User saved</system:String>
+    <system:String x:Key="SaveError">Error during saving</system:String>
+    <system:String x:Key="UploadError">Error during upload</system:String>
+    <system:String x:Key="EmptyName">Name should not be empty</system:String>
+    <system:String x:Key="Woman">Woman</system:String>
+
+
+</ResourceDictionary>
+    
